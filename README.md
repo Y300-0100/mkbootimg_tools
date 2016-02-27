@@ -2,8 +2,8 @@ mkbootimg_tools
 ===============
 
 ### Unpack and repack boot.img,support dtb(dt.img):
-		darkside@darkside-MS-7592:~$ cd /home/darkside/mkbootimg_tools-master
-		darkside@darkside-MS-7592:~/mkbootimg_tools-master$ ./mkboot recovery.img ksuamg5
+		darkside@darkside-MS-7592:~$ cd /home/darkside/mkbootimg_tools
+		darkside@darkside-MS-7592:~/mkbootimg_tools$ ./mkboot recovery.img ksuamg5
 		Unpack & decompress recovery.img to ksuamg5
 		kernel         : kernel
 		ramdisk        : ramdisk
@@ -17,7 +17,7 @@ mkbootimg_tools
 		cmd line       : init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M
 		ramdisk is gzip format.
 		Unpack completed.
-		darkside@darkside-MS-7592:~/mkbootimg_tools-master$ ./mkboot ksuamg5 recovery.img
+		darkside@darkside-MS-7592:~/mkbootimg_tools$ ./mkboot ksuamg5 recovery.img
 		mkbootimg from ksuamg5/img_info.
 		kernel         : kernel
 		ramdisk        : new_ramdisk
@@ -32,7 +32,7 @@ mkbootimg_tools
 		ramdisk is gzip format.
 		Kernel size: 11808344, new ramdisk size: 605238, recovery.img: 12417024.
 		recovery.img has been created.
-		darkside@darkside-MS-7592:~/mkbootimg_tools-master$ 
+		darkside@darkside-MS-7592:~/mkbootimg_tools$ 
 		...
 
 ### Create a dt.img:
