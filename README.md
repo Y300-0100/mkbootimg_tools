@@ -2,41 +2,37 @@ mkbootimg_tools
 ===============
 
 ### Unpack and repack boot.img,support dtb(dt.img):
-		xiaolu@xiaolu-ubuntu64:~/e330s$ mkboot recoveryksuamg5.img ksuamg
-		Unpack & decompress recoveryksuamg5.img to ksuamg
-		  kernel         : /home/xiaolu/work/initramfs/s4/e330s/ksuamg5/zImage
-		  ramdisk        : /home/xiaolu/work/initramfs/s4/e330s/ksuamg5/ramdisk.gz
-		  page_size      : 2048
-		  base_addr      : 0x00000000
-		  kernel size    : 6911360
-		  kernel_addr    : 0x00008000
-		  ramdisk_size   : 2685222
-		  ramdisk_addr   : 0x02000000
-		  second_size    : 0
-		  second_addr    : 0x00f00000
-		  dtb_size       : 1427456
-		  tags_addr      : 0x01e00000
-		  cmdline        : console=null androidboot.hardware=qcom user_debug=31 maxcpus=2 msm_rtb.filter=0x3F
+		darkside@darkside-MS-7592:~$ cd /home/darkside/mkbootimg_tools-master
+		darkside@darkside-MS-7592:~/mkbootimg_tools-master$ ./mkboot recovery.img ksuamg5
+		Unpack & decompress recovery.img to ksuamg5
+		kernel         : kernel
+		ramdisk        : ramdisk
+		page size      : 2048
+		kernel size    : 11808344
+		ramdisk size   : 605289
+		base           : 0x00000800
+		kernel offset  : 0x00008000
+		ramdisk offset : 0x01000000
+		tags offset    : 0x00000100
+		cmd line       : init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M
+		ramdisk is gzip format.
 		Unpack completed.
-
-		xiaolu@xiaolu-ubuntu64:~/e330s$ mkboot ksuamg5 recovery.img
+		darkside@darkside-MS-7592:~/mkbootimg_tools-master$ ./mkboot ksuamg5 recovery.img
 		mkbootimg from ksuamg5/img_info.
-		  kernel         : /home/xiaolu/work/initramfs/s4/e330s/ksuamg5/zImage
-		  ramdisk        : /home/xiaolu/work/initramfs/s4/e330s/ksuamg5/new_ramdisk.gz
-		  page_size      : 
-		  base_addr      : 0x00000000
-		  kernel size    : 6911360
-		  kernel_addr    : 0x00008000
-		  ramdisk_size   : 2685222
-		  ramdisk_addr   : 0x02000000
-		  second_size    : 
-		  second_addr    : 
-		  dtb_size       : 1427456
-		  dtb_img        : dt.img
-		  tags_addr      : 0x01e00000
-		  cmdline        : console=null androidboot.hardware=qcom user_debug=31 maxcpus=2 msm_rtb.filter=0x3F
-		Kernel size: 6911360, new ramdisk size: 3416778, recovery.img: 11759616.
+		kernel         : kernel
+		ramdisk        : new_ramdisk
+		page size      : 2048
+		kernel size    : 11808344
+		ramdisk size   : 605238
+		base           : 0x00000800
+		kernel offset  : 0x00008000
+		ramdisk offset : 0x01000000
+		tags offset    : 0x00000100
+		cmd line       : init=/sbin/init root=/dev/ram rw initrd=0x11000000,16M console=ttyDCC0 mem=88M
+		ramdisk is gzip format.
+		Kernel size: 11808344, new ramdisk size: 605238, recovery.img: 12417024.
 		recovery.img has been created.
+		darkside@darkside-MS-7592:~/mkbootimg_tools-master$ 
 		...
 
 ### Create a dt.img:
